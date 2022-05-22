@@ -1,0 +1,37 @@
+.eisenhower-grid{
+    margin-top: auto;
+}
+
+.eisenhower-label{
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+}
+
+.eisenhower-row{
+    min-height: 200px;
+}
+
+.eisenhower-col{
+    height: 200px;
+    overflow-y: auto;
+    border: 1px solid rgba(22, 22, 22, .3);
+}
+
+.urgent-important{
+    background-color: #b2ff9e;
+    color: black;
+}
+
+.not-urgent-important{
+    background-color: #0081a7;
+}
+
+.urgent-not-important{
+    background-color: #fed9b7;
+    color: black;
+}
+
+.not-urgent-not-important{
+    background-color: #f07167;
+}

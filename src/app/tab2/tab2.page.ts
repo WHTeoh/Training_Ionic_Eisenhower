@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { TaskFormPage } from '../task-form/task-form.page';
 
 @Component({
   selector: 'app-tab2',
@@ -6,7 +8,19 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
+  constructor(private modalController: ModalController) { }
 
-  constructor() {}
+  async createNewTask() {
+    const modal = await this.modalController.create({
+      component: TaskFormPage,
+      componentProps: {
+        TaskObject: null
+      },
+      swipeToClose: true,
+    })
+    await modal.present();
 
+    // const { data } = await modal.onWillDismiss();
+
+  }
 }

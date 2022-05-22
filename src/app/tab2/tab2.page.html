@@ -1,17 +1,31 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Your Tasks
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-grid class="eisenhower-grid">
+    <ion-row class="eisenhower-row">
+      <ion-col class="eisenhower-col urgent-important">
+        <div class="eisenhower-label">Do First</div>
+      </ion-col>
+      <ion-col class="eisenhower-col not-urgent-important">
+        <div class="eisenhower-label">Do Later</div>
+      </ion-col>
+    </ion-row>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+    <ion-row class="eisenhower-row">
+      <ion-col class="eisenhower-col urgent-not-important">
+        <div class="eisenhower-label">Deligate</div>
+      </ion-col>
+      <ion-col class="eisenhower-col not-urgent-not-important">
+        <div class="eisenhower-label">Eliminate</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-button expand="block" fill="solid" (click)="createNewTask()">Add Tasks</ion-button>
 </ion-content>
