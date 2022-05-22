@@ -21,20 +21,25 @@ export class TaskFormPage implements OnInit {
   @Input() TaskObject
 
   ngOnInit() {
-    console.log(this.TaskObject)
     this.PageTitle = (typeof this.TaskObject !== "undefined" && this.TaskObject !== null) ? "Edit" : "Create"
 
     this.requestFetchPriorityTypes();
   }
 
   async requestFetchPriorityTypes() {
-    const resp = await this.dataProvider.ViewTaskPriorityTypes()
+    const resp: any = await this.dataProvider.ViewTaskPriorityTypes()
     // we may have to parse the return results with JSON.parse(resp) 
     // if we are using other method to return JSON results from API
     // in PHP, the JSON is returned as JSON object perfectly, 
     // we doesn't need to do anything once we got the data
-    this.PriorityTypes = resp 
-    console.log(this.PriorityTypes)
+    if (resp.ReturnValue === 1)
+      this.PriorityTypes = resp.Result && resp.Result.length > 0 ? resp.Result : []
+    else
+      this.PriorityTypes = []
+  }
+
+  submitForm() {
+
   }
 
   async dismissModal() {
