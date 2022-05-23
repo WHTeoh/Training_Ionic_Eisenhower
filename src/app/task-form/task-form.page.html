@@ -13,22 +13,23 @@
   <div>
     <ion-item>
       <ion-label position="floating">Task</ion-label>
-      <ion-input type="text" autofocus="true" max="200"></ion-input>
+      <ion-input type="text" max="200" [(ngModel)]="form.TaskName" (ionChange)="FormValidator('TaskName', form.TaskName)"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label position="floating">Priority</ion-label>
-      <ion-select>
+      <ion-select [(ngModel)]="form.PriorityType" (ionChange)="FormValidator('PriorityType', form.PriorityType)">
         <ion-select-option value={{type.TaskPriorityID}} *ngFor="let type of PriorityTypes">{{type.TaskPriority}}</ion-select-option>
       </ion-select>
     </ion-item>
 
     <ion-item>
       <ion-label position="floating">Notes</ion-label>
-      <ion-textarea></ion-textarea>
+      <ion-textarea [(ngModel)]="form.Notes" ></ion-textarea>
     </ion-item>
   </div>
+
   <div>
-    <ion-button expand="full" fill="solid" (click)="submitForm()">Submit</ion-button>
+    <ion-button expand="full" fill="solid" (click)="submitForm()" [disabled]="isInValid === true">Submit</ion-button>
   </div>
 </ion-content>

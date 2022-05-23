@@ -11,18 +11,22 @@
     <ion-row class="eisenhower-row">
       <ion-col class="eisenhower-col urgent-important">
         <div class="eisenhower-label">Do First</div>
+        <div class="tasks" *ngFor="let task of Urgent_Important_Tasks">{{task.TaskName}}</div>
       </ion-col>
       <ion-col class="eisenhower-col not-urgent-important">
         <div class="eisenhower-label">Do Later</div>
+        <div class="tasks" *ngFor="let task of Urgent_Not_Important_Tasks">{{task.TaskName}}</div>
       </ion-col>
     </ion-row>
 
     <ion-row class="eisenhower-row">
       <ion-col class="eisenhower-col urgent-not-important">
         <div class="eisenhower-label">Deligate</div>
+        <div class="tasks" *ngFor="let task of Not_Urgent_Important_Tasks">{{task.TaskName}}</div>
       </ion-col>
       <ion-col class="eisenhower-col not-urgent-not-important">
         <div class="eisenhower-label">Eliminate</div>
+        <div class="tasks" *ngFor="let task of Not_Urgent_Not_Important_Tasks">{{task.TaskName}}</div>
       </ion-col>
     </ion-row>
   </ion-grid>

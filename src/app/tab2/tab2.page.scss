@@ -3,9 +3,10 @@
 }
 
 .eisenhower-label{
-    font-weight: 600;
+    font-weight: 900;
     font-size: 14px;
     text-align: center;
+    margin-bottom: 5px;
 }
 
 .eisenhower-row{
@@ -34,4 +35,13 @@
 
 .not-urgent-not-important{
     background-color: #f07167;
+}
+
+.tasks{
+    font-size: 12px;
+    width: 100%;
+    background: rgba( 255, 255, 255, 1);
+    padding: 6px 8px;
+    margin-bottom: 2px;
+    border-radius: 15px;
 }
