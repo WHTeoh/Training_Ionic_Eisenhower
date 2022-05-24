@@ -1,6 +1,6 @@
 {
-	"appId": "io.ionic.starter",
-	"appName": "myApp",
+	"appId": "com.triviix.eisenhowertaskmgr",
+	"appName": "Eisenhower Task Manager",
 	"webDir": "www",
 	"bundledWebRuntime": false
 }

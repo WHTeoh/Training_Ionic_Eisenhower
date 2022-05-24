@@ -1,5 +1,5 @@
 {
-  "name": "myApp",
+  "name": "Eisenhower Task Manager",
   "integrations": {
     "capacitor": {}
   },

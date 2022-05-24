@@ -10,6 +10,8 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DataProviderService } from './services/data-provider.service';
 
+import { APP_BASE_HREF } from "@angular/common";
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -24,7 +26,8 @@ import { DataProviderService } from './services/data-provider.service';
     {
       provide: RouteReuseStrategy,
       useClass: IonicRouteStrategy
-    }
+    },
+    { provide: APP_BASE_HREF, useValue: '/' },
   ],
   bootstrap: [AppComponent],
 })
